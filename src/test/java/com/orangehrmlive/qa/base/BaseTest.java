@@ -37,7 +37,7 @@ public class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(GeneralUtil.PAGE_LOAD_TIME));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GeneralUtil.IMPLICIT_WAIT));
 
-        driver.get("https://opensource-demo.orangehrmlive.com");
+        driver.get(properties.getProperty("baseUrl"));
     }
 
     public String getUsername() {
