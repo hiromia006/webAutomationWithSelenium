@@ -1,0 +1,4 @@
+# ignore
+/.gradle/
+/.idea/
+/build/
