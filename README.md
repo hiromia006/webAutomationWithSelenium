@@ -8,10 +8,10 @@ Selenium Webdriver: Page Object Model (POM) With Page Factory
 ### Create Java(Gradle) Project in IntelliJ IDEA for API
 * Create Java(Gradle) Project in IntelliJ IDEA
 * Add Gradle Dependencies
-- [Selenium](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
-- [Lorem](https://mvnrepository.com/artifact/com.thedeanda/lorem)
-- [WebDriverManager](https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager)
-- [TestNG](https://mvnrepository.com/artifact/org.testng/testng)
+  - [Selenium](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
+  - [Lorem](https://mvnrepository.com/artifact/com.thedeanda/lorem)
+  - [WebDriverManager](https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager)
+  - [TestNG](https://mvnrepository.com/artifact/org.testng/testng)
 * **Create TestNG XML** plugin install from Marketplace - File >> Settings >> plugin >> Marketplace >> search 'Create
   TestNG XML' & install
 
