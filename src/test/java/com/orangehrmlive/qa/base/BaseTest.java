@@ -5,10 +5,29 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 public class BaseTest {
     public static WebDriver driver;
+    Properties properties;
+
+    public BaseTest() {
+        try {
+            String filePath = System.getProperty("user.dir") + "/src/test/resources/config.properties";
+            properties = new Properties();
+            FileInputStream inputStream = new FileInputStream(filePath);
+            properties.load(inputStream);
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public void initialization() {
         WebDriverManager.firefoxdriver().setup();
@@ -21,6 +40,14 @@ public class BaseTest {
         driver.get("https://opensource-demo.orangehrmlive.com");
     }
 
+    public String getUsername() {
+        return properties.getProperty("username").trim();
+    }
+
+
+    public String getPassword() {
+        return properties.getProperty("password").trim();
+    }
 
 
 }

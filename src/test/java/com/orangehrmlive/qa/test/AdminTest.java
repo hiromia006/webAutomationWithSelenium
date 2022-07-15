@@ -12,11 +12,15 @@ import org.testng.annotations.Test;
 public class AdminTest extends BaseTest {
     AdminPage adminPage;
 
+    public AdminTest() {
+        super();
+    }
+
     @BeforeMethod
     public void setup() {
         initialization();
         adminPage = new LoginPage()
-                .login("Admin", "admin123")
+                .login(getUsername(), getUsername())
                 .clickAdmin();
     }
 

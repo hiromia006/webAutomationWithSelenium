@@ -85,7 +85,9 @@ public class AdminPage extends BaseTest {
     }
 
     public AdminPage clickSaveBtn() {
+        GeneralUtil.waitForDomStable();
         saveBtn.isDisplayed();
+        saveBtn.click();
         saveBtn.click();
         return this;
     }

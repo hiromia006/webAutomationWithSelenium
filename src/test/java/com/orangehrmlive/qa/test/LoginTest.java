@@ -9,6 +9,10 @@ import org.testng.annotations.*;
 public class LoginTest extends BaseTest {
     LoginPage loginPage;
 
+    public LoginTest(){
+        super();
+    }
+
     @BeforeMethod
     public void init() {
         initialization();
@@ -35,7 +39,7 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 3)
     public void loginShouldSucceed() {
-        DashBoardPage homePagePage = loginPage.login("Admin", "admin123");
+        DashBoardPage homePagePage = loginPage.login(getUsername(), getUsername());
         Assert.assertTrue(homePagePage.hasWelcome());
     }
 

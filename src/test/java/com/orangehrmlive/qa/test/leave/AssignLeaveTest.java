@@ -13,6 +13,10 @@ public class AssignLeaveTest extends BaseTest {
     AssignLeavePage assignLeavePage;
     DashBoardPage dashBoardPage;
 
+    public AssignLeaveTest() {
+        super();
+    }
+
     @BeforeMethod
     public void setup() {
         initialization();

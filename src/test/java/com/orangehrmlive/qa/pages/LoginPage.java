@@ -2,6 +2,7 @@ package com.orangehrmlive.qa.pages;
 
 import com.orangehrmlive.qa.base.BaseTest;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -9,12 +10,15 @@ public class LoginPage extends BaseTest {
     // Page Factory ;
 
     @FindBy(id = "txtUsername")
+    @CacheLookup
     WebElement usernameEl;
 
     @FindBy(id = "txtPassword")
+    @CacheLookup
     WebElement passwordEl;
 
     @FindBy(id = "btnLogin")
+    @CacheLookup
     WebElement loginBtn;
 
     @FindBy(id = "spanMessage")
