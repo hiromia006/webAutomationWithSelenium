@@ -1,13 +1,15 @@
 package com.orangehrmlive.qa.util;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import com.orangehrmlive.qa.base.BaseTest;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import java.io.*;
 import java.util.Properties;
 import java.util.Random;
 
-public class GeneralUtil {
+public class GeneralUtil extends BaseTest {
     static public int PAGE_LOAD_TIME = 60;
     public static int IMPLICIT_WAIT = 30;
 
@@ -35,6 +37,12 @@ public class GeneralUtil {
         }
     }
 
+    public static void takeScreenshotAtEndOfTest() throws IOException {
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String currentDir = System.getProperty("user.dir");
+        FileUtils.copyFile(scrFile, new File(currentDir + "/build/screenshots/" + System.currentTimeMillis() + ".png"));
+    }
+
     public static void main(String[] args) {
         Properties properties;
         try {
@@ -52,5 +60,6 @@ public class GeneralUtil {
         System.out.println(properties.getProperty("username"));
         System.out.println(properties.getProperty("password"));
     }
+
 
 }

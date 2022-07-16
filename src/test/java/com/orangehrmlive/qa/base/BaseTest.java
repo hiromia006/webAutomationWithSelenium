@@ -1,9 +1,11 @@
 package com.orangehrmlive.qa.base;
 
 import com.orangehrmlive.qa.util.GeneralUtil;
+import com.orangehrmlive.qa.util.WebEventListener;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,8 +14,11 @@ import java.time.Duration;
 import java.util.Properties;
 
 public class BaseTest {
-    public static WebDriver driver;
-    Properties properties;
+    protected static WebDriver driver;
+    protected Properties properties;
+
+    protected EventFiringWebDriver e_driver;
+    protected WebEventListener eventListener;
 
     public BaseTest() {
         try {
@@ -32,8 +37,15 @@ public class BaseTest {
     public void initialization() {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
-        driver.manage().deleteAllCookies();
+
+        e_driver = new EventFiringWebDriver(driver);
+        // Now create object of EventListerHandler to register it with EventFiringWebDriver
+        eventListener = new WebEventListener();
+        e_driver.register(eventListener);
+        driver = e_driver;
+
         driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(GeneralUtil.PAGE_LOAD_TIME));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GeneralUtil.IMPLICIT_WAIT));
 
