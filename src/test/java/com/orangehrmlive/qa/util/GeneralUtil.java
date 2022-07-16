@@ -39,8 +39,8 @@ public class GeneralUtil extends BaseTest {
 
     public static void takeScreenshotAtEndOfTest() throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String currentDir = System.getProperty("user.dir");
-        FileUtils.copyFile(scrFile, new File(currentDir + "/build/screenshots/" + System.currentTimeMillis() + ".png"));
+        String currentDir = System.getProperty("user.dir")+ "/build/screenshots/" ;
+        FileUtils.copyFile(scrFile, new File(currentDir + System.currentTimeMillis() + ".png"));
     }
 
     public static void main(String[] args) {

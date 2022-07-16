@@ -35,6 +35,7 @@ public class LoginPage extends BaseTest {
         passwordEl.clear();
         passwordEl.sendKeys(password);
         loginBtn.click();
+//        loginBtn.click();
 
         return new DashBoardPage();
     }

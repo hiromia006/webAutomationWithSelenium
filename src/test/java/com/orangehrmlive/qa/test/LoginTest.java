@@ -3,6 +3,7 @@ package com.orangehrmlive.qa.test;
 import com.orangehrmlive.qa.base.BaseTest;
 import com.orangehrmlive.qa.pages.DashBoardPage;
 import com.orangehrmlive.qa.pages.LoginPage;
+import com.orangehrmlive.qa.util.GeneralUtil;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -46,6 +47,7 @@ public class LoginTest extends BaseTest {
 
     @AfterMethod
     public void TearDown() {
+        GeneralUtil.mediumWaitForDomStable();
         driver.quit();
     }
 
