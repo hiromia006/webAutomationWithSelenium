@@ -34,8 +34,7 @@ public class LoginPage extends BaseTest {
 
         passwordEl.clear();
         passwordEl.sendKeys(password);
-        loginBtn.click();
-//        loginBtn.click();
+        scrollToElementAndClick(loginBtn);
 
         return new DashBoardPage();
     }
@@ -46,7 +45,7 @@ public class LoginPage extends BaseTest {
 
         passwordEl.clear();
         passwordEl.sendKeys(password);
-        loginBtn.click();
+        scrollToElementAndClick(loginBtn);
 
     }
 
@@ -54,12 +53,12 @@ public class LoginPage extends BaseTest {
         usernameEl.isDisplayed();
         usernameEl.clear();
         usernameEl.sendKeys(username);
-        loginBtn.click();
+        scrollToElementAndClick(loginBtn);
     }
 
     public void loginFail() {
         loginBtn.isDisplayed();
-        loginBtn.click();
+        scrollToElementAndClick(loginBtn);
     }
 
     public boolean hasErrorMessage() {

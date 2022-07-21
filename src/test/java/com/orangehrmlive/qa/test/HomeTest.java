@@ -17,7 +17,7 @@ public class HomeTest extends BaseTest {
     public void setup() {
         initialization();
         loginPage = new LoginPage();
-        homePage = loginPage.login(getUsername(), getUsername());
+        homePage = loginPage.login(getUsername(), getPassword());
     }
 
     @Test

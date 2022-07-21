@@ -40,7 +40,7 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 3)
     public void loginShouldSucceed() {
-        DashBoardPage homePagePage = loginPage.login(getUsername(), getUsername());
+        DashBoardPage homePagePage = loginPage.login(getUsername(), getPassword());
         Assert.assertTrue(homePagePage.hasWelcome());
     }
 

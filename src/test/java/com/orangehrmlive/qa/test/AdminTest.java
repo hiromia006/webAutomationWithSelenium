@@ -20,7 +20,7 @@ public class AdminTest extends BaseTest {
     public void setup() {
         initialization();
         adminPage = new LoginPage()
-                .login(getUsername(), getUsername())
+                .login(getUsername(), getPassword())
                 .clickAdmin();
     }
 

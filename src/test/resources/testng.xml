@@ -5,9 +5,11 @@
         <listener class-name="com.orangehrmlive.qa.extentReportListener.ExtentReporterNG"/>
     </listeners>
 
-    <test  name="ExtentReporterNG">
+    <test name="ExtentReporterNG">
         <classes>
             <class name="com.orangehrmlive.qa.test.LoginTest"></class>
+            <class name="com.orangehrmlive.qa.test.HomeTest"></class>
+            <class name="com.orangehrmlive.qa.test.AdminTest"></class>
         </classes>
     </test>
 </suite>

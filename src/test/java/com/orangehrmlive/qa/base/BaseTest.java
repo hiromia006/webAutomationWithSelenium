@@ -3,7 +3,9 @@ package com.orangehrmlive.qa.base;
 import com.orangehrmlive.qa.util.GeneralUtil;
 import com.orangehrmlive.qa.util.WebEventListener;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
@@ -59,6 +61,15 @@ public class BaseTest {
 
     public String getPassword() {
         return properties.getProperty("password").trim();
+    }
+
+    public void scrollToElementAndClick(WebElement webElement) {
+        webElement.isDisplayed();
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", webElement);
+        GeneralUtil.waitForDomStable();
+        webElement.click();
+
     }
 
 

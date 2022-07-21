@@ -29,18 +29,12 @@ public class DashBoardPage extends BaseTest {
     }
 
     public AssignLeavePage clickAssignLeave() {
-        GeneralUtil.longWaitForDomStable();
-        assignLeave.isDisplayed();
-        assignLeave.click();
+        scrollToElementAndClick(assignLeave);
         return new AssignLeavePage();
     }
 
     public AdminPage clickAdmin() {
-        GeneralUtil.waitForDomStable();
-        adminEl.isDisplayed();
-        adminEl.click();
-        adminEl.click();
-
+        scrollToElementAndClick(adminEl);
         return new AdminPage();
     }
 

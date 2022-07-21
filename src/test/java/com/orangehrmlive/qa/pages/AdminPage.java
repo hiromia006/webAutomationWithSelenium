@@ -49,8 +49,7 @@ public class AdminPage extends BaseTest {
     }
 
     public AdminPage clickAddBtn() {
-        addBtn.isDisplayed();
-        addBtn.click();
+        scrollToElementAndClick(addBtn);
         return this;
     }
 
@@ -60,9 +59,9 @@ public class AdminPage extends BaseTest {
         employeeNameEl.sendKeys(employeeName);
         employees.get(0).isDisplayed();
         GeneralUtil.waitForDomStable();
-        employees.get(0).click();
+        scrollToElementAndClick(employees.get(0));
         GeneralUtil.waitForDomStable();
-        usernameEl.click();
+        scrollToElementAndClick(usernameEl);
         return this;
     }
 
@@ -85,10 +84,7 @@ public class AdminPage extends BaseTest {
     }
 
     public AdminPage clickSaveBtn() {
-        GeneralUtil.waitForDomStable();
-        saveBtn.isDisplayed();
-        saveBtn.click();
-        saveBtn.click();
+        scrollToElementAndClick(saveBtn);
         return this;
     }
 
