@@ -5,7 +5,7 @@ Selenium Webdriver: Page Object Model (POM) With Page Factory
 * [Download & Install JDK](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
 * [Download & Install IntelliJ IDEA Community Version](https://www.jetbrains.com/idea/download/)
 
-### Create Java(Gradle) Project in IntelliJ IDEA for API
+### Create Java(Gradle) Project in IntelliJ IDEA
 * Create Java(Gradle) Project in IntelliJ IDEA
 * Add Gradle Dependencies
   - [Selenium](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
