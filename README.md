@@ -1,4 +1,4 @@
-# Prepare Web Automation Testing Instance or Environment using Selenium, Java, TestNG & POM
+# Prepare Web Automation Testing Environment using Selenium, Java, TestNG & POM
 Selenium Webdriver: Page Object Model (POM) With Page Factory
 
 ### Prerequisite software
