@@ -12,7 +12,7 @@ import java.time.Duration;
 import java.util.Properties;
 
 public class BaseParaBankTest {
-    protected WebDriver driver;
+    protected static WebDriver driver;
     private Properties properties;
 
     public BaseParaBankTest() {
