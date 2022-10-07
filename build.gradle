@@ -17,6 +17,10 @@ dependencies {
     // https://mvnrepository.com/artifact/com.relevantcodes/extentreports
     implementation 'com.relevantcodes:extentreports:2.41.2'
 
+    //POI
+    testImplementation 'org.apache.poi:poi:5.2.2'
+    testImplementation 'org.apache.poi:poi-ooxml:5.2.2'
+
 }
 
 test {
