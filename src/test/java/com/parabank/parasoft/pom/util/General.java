@@ -36,7 +36,7 @@ public class General extends BaseParaBankTest {
     }
 
     public static Object[][] getTestData(String sheetName) {
-        String path = System.getProperty("user.dir") + "/src/test/java/com/sqlLearningAcademy/seleniumWebdriver/batchTwo/practices/pom/testdata/TestData.xlsx";
+        String path = System.getProperty("user.dir") + "/src/pom/testdata/TestData.xlsx";
         Workbook book = null;
         Sheet sheet;
         FileInputStream file = null;
