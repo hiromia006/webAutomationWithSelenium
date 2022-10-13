@@ -8,6 +8,7 @@ import com.thedeanda.lorem.LoremIpsum;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class RegisterTest extends BaseParaBankTest {
@@ -24,13 +25,17 @@ public class RegisterTest extends BaseParaBankTest {
 
     }
 
-    @Test
-    public void registrationShouldSucceed() {
+    @Test(dataProvider = "getDataProviderData")
+    public void registrationShouldSucceed(String firstName, String lastName) {
         RegisterPage registerPage = customerLoginPage.clickRegistration()
-                .fillFirstName(LoremIpsum.getInstance().getFirstName())
-                .fillLastName(LoremIpsum.getInstance().getLastName());
+                .fillFirstName(firstName)
+                .fillLastName(lastName);
     }
 
+    @DataProvider
+    public static Object[][] getDataProviderData() {
+        return new Object[][]{{LoremIpsum.getInstance().getFirstName(), LoremIpsum.getInstance().getName()}, {LoremIpsum.getInstance().getFirstName(), LoremIpsum.getInstance().getName()}, {LoremIpsum.getInstance().getFirstName(), LoremIpsum.getInstance().getName()}};
+    }
 
     @AfterMethod
     public void tearDown(ITestResult result) {
@@ -39,4 +44,6 @@ public class RegisterTest extends BaseParaBankTest {
         }
         driver.quit();
     }
+
+
 }
