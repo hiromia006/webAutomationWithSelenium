@@ -1,13 +1,13 @@
 package com.parabank.parasoft.pom.pages;
 
 import com.parabank.parasoft.pom.BaseParaBankTest;
-import com.parabank.parasoft.pom.util.General;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class CustomerLoginPage extends BaseParaBankTest {
-    @FindBy(name = "username")
+    @FindBy(how = How.NAME, using = "username")
     WebElement usernameEl;
 
     @FindBy(name = "password")
