@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+
 public class OpenAccountTest extends BaseParaBankTest {
     HomePage homePage;
 
@@ -18,12 +19,12 @@ public class OpenAccountTest extends BaseParaBankTest {
 
     @BeforeMethod
     public void initialization() {
-        setUp();
+        setUpBrowser();
         homePage = new CustomerLoginPage()
                 .login(getParaBankUserName(), getParaBankPassword());
     }
 
-    @Test
+    @Test(retryAnalyzer = RerunningCount.class)
     public void openAccountShouldSucceed() {
         OpenAccountPage openAccountPage = homePage.clickOpenNewAccountLink()
                 .selectAccountType(1)

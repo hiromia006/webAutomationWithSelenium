@@ -1,9 +1,11 @@
 package com.parabank.parasoft.pom;
 
+import com.google.common.base.Objects;
 import com.parabank.parasoft.pom.util.General;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -31,9 +33,23 @@ public class BaseParaBankTest {
         }
     }
 
-    public void setUp() {
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+    public void setUpBrowser() {
+        if (Objects.equal(properties.getProperty("browserName"), "firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+        } else if (Objects.equal(properties.getProperty("browserName"), "headless")) {
+            WebDriverManager.firefoxdriver().setup();
+            FirefoxOptions firefoxOptions = new FirefoxOptions();
+            firefoxOptions.setHeadless(true);
+            driver = new FirefoxDriver(firefoxOptions);
+        } else if (Objects.equal(properties.getProperty("browserName"), "chrome")) {
+            WebDriverManager.chromedriver().setup();
+            driver = new FirefoxDriver();
+        } else {
+            System.out.println("Please provide browser name");
+        }
+
+
         driver.get(properties.getProperty("paraBank.baseUrl"));
 
         driver.manage().window().maximize();

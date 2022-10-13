@@ -19,7 +19,7 @@ public class RegisterTest extends BaseParaBankTest {
 
     @BeforeMethod
     public void initialization() {
-        setUp();
+        setUpBrowser();
         customerLoginPage = new CustomerLoginPage();
 
     }

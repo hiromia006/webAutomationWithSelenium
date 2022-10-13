@@ -20,7 +20,7 @@ public class CustomerLoginTest extends BaseParaBankTest {
 
     @BeforeMethod
     public void init() {
-        setUp();
+        setUpBrowser();
         customerLoginPage = new CustomerLoginPage();
     }
 
