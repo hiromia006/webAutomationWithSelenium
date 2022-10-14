@@ -37,7 +37,7 @@ public class General extends BaseParaBankTest {
     }
 
     public static Object[][] getTestData(String sheetName) {
-        String path = System.getProperty("user.dir") + "/src/pom/testdata/TestData.xlsx";
+        String path = System.getProperty("user.dir") + "/src/test/java/com/parabank/parasoft/pom/testdata/ddt.xlsx";
         Workbook book = null;
         Sheet sheet;
         FileInputStream file = null;
@@ -58,7 +58,7 @@ public class General extends BaseParaBankTest {
         for (int i = 0; i < sheet.getLastRowNum(); i++) {
             for (int k = 0; k < sheet.getRow(0).getLastCellNum(); k++) {
                 data[i][k] = sheet.getRow(i + 1).getCell(k).toString();
-                // System.out.println(data[i][k]);
+                 System.out.println(data[i][k]);
             }
         }
         return data;

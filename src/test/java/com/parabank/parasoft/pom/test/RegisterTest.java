@@ -32,11 +32,22 @@ public class RegisterTest extends BaseParaBankTest {
                 .fillLastName(lastName);
     }
 
+    @Test(dataProvider = "getDataProviderDataFromExcel")
+    public void registrationDdtShouldSucceed(String firstName, String lastName) {
+        RegisterPage registerPage = customerLoginPage.clickRegistration()
+                .fillFirstName(firstName)
+                .fillLastName(lastName);
+    }
     @DataProvider
     public static Object[][] getDataProviderData() {
         return new Object[][]{{LoremIpsum.getInstance().getFirstName(), LoremIpsum.getInstance().getName()}, {LoremIpsum.getInstance().getFirstName(), LoremIpsum.getInstance().getName()}, {LoremIpsum.getInstance().getFirstName(), LoremIpsum.getInstance().getName()}};
     }
 
+
+    @DataProvider
+    public static Object[][] getDataProviderDataFromExcel() {
+        return General.getTestData("Sheet1");
+    }
     @AfterMethod
     public void tearDown(ITestResult result) {
         if (ITestResult.SUCCESS == result.getStatus()) {
