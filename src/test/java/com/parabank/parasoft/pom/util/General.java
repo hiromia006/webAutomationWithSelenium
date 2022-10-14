@@ -14,7 +14,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class General extends BaseParaBankTest {
+public class General {
     public static final int PAGE_LOAD_TIME = 30;
     public static final int IMPLICIT_WAIT = 30;
 
@@ -26,15 +26,6 @@ public class General extends BaseParaBankTest {
         }
     }
 
-    public static void takeScreenshot(String fileName) {
-        try {
-            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            String currentDir = System.getProperty("user.dir") + "/build/screenshots/";
-            FileUtils.copyFile(scrFile, new File(currentDir + fileName + System.currentTimeMillis() + ".png"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     public static Object[][] getTestData(String sheetName) {
         String path = System.getProperty("user.dir") + "/src/test/java/com/parabank/parasoft/pom/testdata/ddt.xlsx";

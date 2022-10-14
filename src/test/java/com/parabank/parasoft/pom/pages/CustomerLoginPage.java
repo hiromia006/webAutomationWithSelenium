@@ -38,8 +38,7 @@ public class CustomerLoginPage extends BaseParaBankTest {
         return new HomePage();
     }
 
-    public RegisterPage clickRegistration() {
-//        General.waitForDomStable();
+    public RegisterPage clickRegistrationLink() {
         register.isDisplayed();
         register.click();
         return new RegisterPage();

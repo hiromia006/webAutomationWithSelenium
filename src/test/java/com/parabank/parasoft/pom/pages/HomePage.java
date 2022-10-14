@@ -26,4 +26,9 @@ public class HomePage extends BaseParaBankTest {
         openAccountLink.click();
         return new OpenAccountPage();
     }
+
+    public boolean isLogoutLink() {
+        return logout.isDisplayed();
+    }
+
 }
