@@ -52,7 +52,8 @@ public class BaseTest {
 
     @AfterMethod
     public void teatDown() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(100);
+        driver.close();
         driver.quit();
         Thread.sleep(2500);
     }

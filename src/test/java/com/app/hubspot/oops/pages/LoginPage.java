@@ -16,7 +16,7 @@ public class LoginPage extends BasePage {
 
     public LoginPage fillUsername(String username) {
         waitForElement(usernameLocator);
-        getWebElement(usernameLocator).click();
+        getWebElement(usernameLocator).clear();
         getWebElement(usernameLocator).sendKeys(username);
         return this;
     }
