@@ -1,4 +1,4 @@
-package com.oops.testcases;
+package com.app.hubspot.oops.testcases;
 
 import com.app.hubspot.oops.pages.BasePage;
 import com.app.hubspot.oops.pages.Page;

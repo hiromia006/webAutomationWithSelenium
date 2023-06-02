@@ -1,4 +1,4 @@
-package com.oops.pages;
+package com.app.hubspot.oops.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
