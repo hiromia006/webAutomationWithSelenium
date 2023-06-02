@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="tests" name="All Test Suite" verbose="2">
-    <test name="Login" parallel="methods" thread-count="1">
+    <test name="Login" parallel="methods" thread-count="3">
         <parameter name="browserName" value="firefox"></parameter>
         <classes>
             <class name="com.app.hubspot.oops.testcases.LoginTest"></class>

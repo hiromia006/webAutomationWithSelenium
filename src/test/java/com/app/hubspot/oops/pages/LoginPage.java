@@ -15,7 +15,6 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage fillUsername(String username) {
-        waitForPageTittle(getPageTittle());
         waitForElement(usernameLocator);
         getWebElement(usernameLocator).click();
         getWebElement(usernameLocator).sendKeys(username);
@@ -51,8 +50,8 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage doLogin() {
-        return fillUsername("")
-                .fillPassword("")
+        return fillUsername("sqalearningacademy1@gmail.com")
+                .fillPassword("1234455444")
                 .clickLoginLinkBtn();
     }
 

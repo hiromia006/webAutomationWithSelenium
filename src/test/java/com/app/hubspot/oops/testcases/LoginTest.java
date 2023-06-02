@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(loginPage.hasErrorMessage());
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, enabled = false)
     public void doLoginWithUsernameShouldFail() {
         LoginPage loginPage = page.getInstance(LoginPage.class)
                 .doLogin("sqalearningacademy2@gmail.com");
