@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void loginWithUsernameShouldFail() {
         LoginPage loginPage = page.getInstance(LoginPage.class)
-                .doLogin("asjdsjkadh");
+                .doLogin("automationsession");
         Assert.assertTrue(loginPage.hasLoginFailError());
 
     }
