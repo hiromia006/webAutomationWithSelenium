@@ -36,3 +36,12 @@ Selenium Webdriver: Page Object Model (POM) With Page Factory
 * [Ultimateqa](https://ultimateqa.com/automation)
 * [Selectorshub Practice Page](https://selectorshub.com/xpath-practice-page/)
 * [Webdriveruniversity](https://webdriveruniversity.com/)
+
+  ### Best Demo Site with E-Commerce/Banking Sites
+* [Parabank](https://parabank.parasoft.com/parabank/)
+* [Magento Softwaretestingboard](https://magento.softwaretestingboard.com/)
+* [Demoblaze](https://www.demoblaze.com/)
+* [Saucedemo](https://www.saucedemo.com/)
+* [Automation Bookstore](https://automationbookstore.dev/)
+* [Petstore octoperf](https://petstore.octoperf.com/actions/Catalog.action)
+* [Gatling](https://computer-database.gatling.io/computers)
