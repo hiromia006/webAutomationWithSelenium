@@ -23,3 +23,16 @@ Selenium Webdriver: Page Object Model (POM) With Page Factory
 ### Run Test Case
 * **Run Test Case** - Go to desired Java Class where has Test Case, Right click of mouse on Test Case >> click on Run
 * **Run XML File** - After create TestNG file, Right click of mouse on TestNG xml >> click on Run
+
+### Top Playground Platforms for QA Automation practice
+* [The Internet Herokuapp](https://the-internet.herokuapp.com/)
+* [Uitestingplayground](http://uitestingplayground.com/)
+* [Play1 Automationcamp] (https://play1.automationcamp.ir/)
+* [Demo QA] (https://demoqa.com/)
+* [Saucedemo] (https://www.saucedemo.com)
+* [Demo OrangeHRM] (https://opensource-demo.orangehrmlive.com)
+* [Selenium Test Page] (https://testpages.eviltester.com/styled/index.html)
+* [LetCode] (https://letcode.in/test)
+* [Ultimateqa] (https://ultimateqa.com/automation)
+* [Selectorshub Practice Page] (https://selectorshub.com/xpath-practice-page/)
+* [Webdriveruniversity] (https://webdriveruniversity.com/)
