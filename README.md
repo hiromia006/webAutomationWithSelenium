@@ -45,3 +45,7 @@ Selenium Webdriver: Page Object Model (POM) With Page Factory
 * [Automation Bookstore](https://automationbookstore.dev/)
 * [Petstore octoperf](https://petstore.octoperf.com/actions/Catalog.action)
 * [Gatling](https://computer-database.gatling.io/computers)
+
+### Other Demo Site
+* [Demo Web Shop](https://demowebshop.tricentis.com/)
+* [Automation Exercise](https://automationexercise.com/)
