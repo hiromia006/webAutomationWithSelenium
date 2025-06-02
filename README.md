@@ -49,3 +49,4 @@ Selenium Webdriver: Page Object Model (POM) With Page Factory
 ### Other Demo Site
 * [Demo Web Shop](https://demowebshop.tricentis.com/)
 * [Automation Exercise](https://automationexercise.com/)
+* [Tutorialspoint](https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php)
